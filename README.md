@@ -18,7 +18,7 @@ Capture images from Slack
   
     `curl -sSL https://get.docker.com | sh`
 
-1. Give the ‘pi’ user the ability to run Docker. 
+1. Give the `pi` user the ability to run Docker. 
     
     `sudo usermod -aG docker pi`
 
