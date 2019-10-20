@@ -1,5 +1,12 @@
 # Capture Bot 
 
+Capture images from Slack
+
+```
+@capture-bot capture 
+```
+
+
 ## Raspberry Pi
 
 1. install `Raspbian`.
