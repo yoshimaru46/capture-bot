@@ -73,9 +73,8 @@ def has_person_in_image(predictions):
         'Finger', 'Elbow', 'Ear', 'Human leg', 'Human body'
     ]
 
-    for characteristic in human_characteristics:
-        if characteristic in predictions:
-            return True
+    if set(human_characteristics) & set(predictions): 
+        return True
 
     return False
 
