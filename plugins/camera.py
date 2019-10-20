@@ -88,12 +88,20 @@ def capture(message):
     predictions = get_predictions()
     message.send('Predictions: ' + ', '.join(predictions))
 
-    if has_person_in_image(predictions):
+    retry_count = 0
+
+    while retry_count < 3:
+        if not has_person_in_image(predictions):
+            break
+
         message.send('retry...')
         time.sleep(3)
 
         capture_image()
-        message.send('Predictions: ' + ', '.join(get_predictions()))
+        predictions = get_predictions()
+        message.send('Predictions: ' + ', '.join(predictions()))
+
+        retry_count += 1
 
     slackapi_params = {
         'token': slackbot_settings.API_TOKEN,
