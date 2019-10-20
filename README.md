@@ -1,6 +1,6 @@
 # Capture Bot 
 
-## raspberry pi
+## Raspberry Pi
 
 1. install `Raspbian`.
 1. `sudo apt-get update`
@@ -29,4 +29,20 @@
 1. `docker build ./ -t capture-bot`
 1. `docker run --privileged --env-file ./env.txt capture-bot`
 
+## Tips
+
+### Start on reboot
+
+`capture-bot.sh`
+
+```sh
+cd capture-bot
+docker build ./ -t capture-bot && docker run --privileged --env-file ./env.txt --restart=always capture-bot
+```
+
+`crontab -e`
+
+```sh
+@reboot /home/pi/capture-bot.sh
+```
 
