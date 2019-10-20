@@ -99,7 +99,7 @@ def capture(message):
 
         capture_image()
         predictions = get_predictions()
-        message.send('Predictions: ' + ', '.join(predictions()))
+        message.send('Predictions: ' + ', '.join(predictions))
 
         retry_count += 1
 
