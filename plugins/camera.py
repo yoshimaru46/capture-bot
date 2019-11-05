@@ -68,9 +68,23 @@ def get_predictions():
 
 def has_person_in_image(predictions):
     human_characteristics = [
-        'Hair', 'Arm', 'Chin', 'Hairstyle', 'Eyewear', 'Shoulder',
-        'Glasses', 'Forehead', 'T-shirt', 'Jaw', 'Hair',
-        'Finger', 'Elbow', 'Ear', 'Human leg', 'Human body'
+        "Arm",
+        "Black hair",
+        "Chin",
+        "Ear",
+        "Elbow",
+        "Eyewear",
+        "Finger",
+        "Forehead",
+        "Glasses",
+        "Hair",
+        "Hairstyle",
+        "Hand",
+        "Human body",
+        "Human leg",
+        "Jaw",
+        "Shoulder",
+        "T-shirt"
     ]
 
     if set(human_characteristics) & set(predictions): 
